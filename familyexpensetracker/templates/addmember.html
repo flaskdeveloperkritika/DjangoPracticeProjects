@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Family Member</title>
+    <style>
+        .center {
+            width : 50%;
+            margin : 50px auto;
+            }
+        input {
+            width : 100%;
+
+            height : 50px;
+            margin-top : 10px;
+            text-align : center;
+
+            }
+    </style>
+</head>
+<body>
+<div class="center">
+    <h1>Add Family Member</h1>
+    <form enctype="multipart/form-data" action="savedata" method="post">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="enter the name">
+        <input type="text" name="mobile" placeholder="enter the mobile">
+        <input type="text" name="work" placeholder="enter the work">
+        <input type="text" name="income" placeholder="enter income">
+        upload image:
+        <input type="file" name="image">
+        upload payslip:
+        <input type="file" name="payslip">
+        <input type="submit" value="save member">
+    </form>
+</div>
+</body>
+</html>
